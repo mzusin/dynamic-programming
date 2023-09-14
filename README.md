@@ -40,5 +40,20 @@
 - Sometimes for some state variables, they do not need to be stored in an array at all, but you can use **one or more variables to store them!**
 - Whenever you notice that values calculated by a DP algorithm are only reused a few times and then never used again, try to see if you can save on space by replacing an array with some variables. A good first step for this is to look at the recurrence relation to see what previous states are used. For example, in Fibonacci, we only refer to the previous two states, so all results before n - 2 can be discarded.
 
+### A recurrence relation
+- This is an equation that describes **transition between states**.
+- Typically, finding the recurrence relation is the most difficult part of solving a DP problem.
+- In problems like **up to k steps at a time** - recurrence relation is not one static formula. And you need to make a loop inside to find the best option every time.
+
+### How to find base cases?
+- Finding the base cases is often the easiest part of solving a DP problem.
+- When coming up with the base case(s) ask yourself: What state(s) can I find the answer to without using dynamic programming?
+
+### How to find Time and Space Complexity?
+- The time complexity of a DP algorithm is directly tied to the number of possible states
+- Time complexity = O(number_of_states * time_of_state)
+- Since we store states, the space complexity is equal to the number of states
+- That means that in problems where calculating a state is O(1), the time and space complexity are the same.
+
 
 
