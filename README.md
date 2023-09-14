@@ -55,5 +55,12 @@
 - Since we store states, the space complexity is equal to the number of states
 - That means that in problems where calculating a state is O(1), the time and space complexity are the same.
 
+### How to solve DP problems?
+1. You need a **function** that will calculate a solution to the problem for each state, or a **data structure** that will store this solution for each state.
+2. State variables should be passed as **arguments** to that function.
+3. To check all possible **variants** that we have.
+4. We take the simplest data as an example - 0, 1, 2, 3, 4, 5 or something similar.
+5. Let's see how the first item transforms into the second item - everything that we don't know, we define as future recursion.
+
 
 
