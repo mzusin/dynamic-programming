@@ -1,4 +1,8 @@
-import { fibonacciNumberIterative, fibonacciNumberRecursive } from '../src/core';
+import {
+    fibonacciNumberIterative,
+    fibonacciNumberRecursive,
+    countBits,
+} from '../src/core';
 
 describe('Core', () => {
 
@@ -51,6 +55,28 @@ describe('Core', () => {
 
         it('should return the correct Fibonacci number for n = 15', () => {
             expect(fibonacciNumberRecursive(15)).toBe(610);
+        });
+    });
+
+    describe('countBits()', () => {
+        it('should return [0] for n = 0', () => {
+            expect(countBits(0)).toEqual([0]);
+        });
+
+        it('should return [0, 1] for n = 1', () => {
+            expect(countBits(1)).toEqual([0, 1]);
+        });
+
+        it('should return [0, 1, 1] for n = 2', () => {
+            expect(countBits(2)).toEqual([0, 1, 1]);
+        });
+
+        it('should return [0, 1, 1, 2, 1, 2] for n = 5', () => {
+            expect(countBits(5)).toEqual([0, 1, 1, 2, 1, 2]);
+        });
+
+        it('should return [0, 1, 1, 2, 1, 2, 2, 3, 1, 2, 2] for n = 10', () => {
+            expect(countBits(10)).toEqual([0, 1, 1, 2, 1, 2, 2, 3, 1, 2, 2]);
         });
     });
 });

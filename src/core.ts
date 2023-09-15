@@ -32,3 +32,19 @@ export const fibonacciNumberIterative = (n: number) => {
 
     return arr[arr.length-1];
 };
+
+/**
+ * https://leetcode.com/problems/counting-bits/description/
+ */
+export const countBits = (n: number) => {
+
+    const res: number[] = [];
+
+    for(let i=0; i<=n; i++) {
+        const iDividedBy2 = i >> 1; // Math.floor(i/2);
+        const lsb = i & 1;
+        res[i] = (res[iDividedBy2] ?? 0) + lsb;
+    }
+
+    return res;
+};
