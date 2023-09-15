@@ -4,6 +4,14 @@
 - The classic DP problem is Fibonacci.
 - There are two ways to implement a DP algorithm - **Bottom-up** (tabulation) and **Top-down** (memoization).
 
+-------------
+
+## Functions
+- fibonacciNumberRecursive: (n: number) => number;
+- fibonacciNumberIterative: (n: number) => number;
+
+-------------
+
 ### Bottom-up (Tabulation)
 - Implemented with iteration.
 - Made efficient with array or other storage.
