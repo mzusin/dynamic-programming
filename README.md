@@ -9,6 +9,7 @@
 ## Functions
 - fibonacciNumberRecursive: (n: number) => number;
 - fibonacciNumberIterative: (n: number) => number;
+- countBits: (n: number) => number[];
 
 -------------
 
