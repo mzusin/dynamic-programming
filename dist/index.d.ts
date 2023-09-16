@@ -5,4 +5,6 @@ module 'mz-dynamic-programming' {
     export const countBits: (n: number) => number[];
     export const minCostClimbingStairsRecursive: (cost: number[]) => number;
     export const minCostClimbingStairsIterative: (cost: number[]) => number;
+    export const getRowRecursive: (rowIndex: number) => number[];
+    export const getRowIterative: (rowIndex: number) => number[];
 }

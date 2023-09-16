@@ -13,6 +13,8 @@
 - countBits: (n: number) => number[];
 - minCostClimbingStairsRecursive: (cost: number[]) => number;
 - minCostClimbingStairsIterative: (cost: number[]) => number;
+- getRowRecursive: (rowIndex: number) => number[];
+- getRowIterative: (rowIndex: number) => number[];
 
 -------------
 

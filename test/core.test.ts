@@ -5,6 +5,8 @@ import {
     countBits,
     minCostClimbingStairsRecursive,
     minCostClimbingStairsIterative,
+    getRowRecursive,
+    getRowIterative,
 } from '../src/core';
 
 describe('Core', () => {
@@ -138,4 +140,59 @@ describe('Core', () => {
             expect(minCostClimbingStairsIterative([1, 100, 1, 1, 1, 100, 1, 1, 100, 1])).toBe(6);
         });
     });
+
+    describe('getRowRecursive()' ,() => {
+
+        it('should return [1] for rowIndex = 0', () => {
+            expect(getRowRecursive(0)).toEqual([1]);
+        });
+
+        it('should return [1, 1] for rowIndex = 1', () => {
+            expect(getRowRecursive(1)).toEqual([1, 1]);
+        });
+
+        it('should return the correct row for rowIndex = 2', () => {
+            expect(getRowRecursive(2)).toEqual([1, 2, 1]);
+        });
+
+        it('should return the correct row for rowIndex = 3', () => {
+            expect(getRowRecursive(3)).toEqual([1, 3, 3, 1]);
+        });
+
+        it('should return the correct row for rowIndex = 4', () => {
+            expect(getRowRecursive(4)).toEqual([1, 4, 6, 4, 1]);
+        });
+
+        it('should return the correct row for rowIndex = 5', () => {
+            expect(getRowRecursive(5)).toEqual([1, 5, 10, 10, 5, 1]);
+        });
+    });
+
+    describe('getRowIterative()' ,() => {
+        it('should return [1] for rowIndex = 0', () => {
+            expect(getRowIterative(0)).toEqual([1]);
+        });
+
+        it('should return [1, 1] for rowIndex = 1', () => {
+            expect(getRowIterative(1)).toEqual([1, 1]);
+        });
+
+        it('should return the correct row for rowIndex = 2', () => {
+            expect(getRowIterative(2)).toEqual([1, 2, 1]);
+        });
+
+        it('should return the correct row for rowIndex = 3', () => {
+            expect(getRowIterative(3)).toEqual([1, 3, 3, 1]);
+        });
+
+        it('should return the correct row for rowIndex = 4', () => {
+            expect(getRowIterative(4)).toEqual([1, 4, 6, 4, 1]);
+        });
+
+        it('should return the correct row for rowIndex = 5', () => {
+            expect(getRowIterative(5)).toEqual([1, 5, 10, 10, 5, 1]);
+        });
+
+    });
+
 });

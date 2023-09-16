@@ -102,3 +102,48 @@ export const minCostClimbingStairsIterative = (cost: number[]) => {
 
     return cache[cost.length];
 };
+
+/**
+ * https://leetcode.com/problems/pascals-triangle-ii/description/
+ */
+export const getRowRecursive = (rowIndex: number) => {
+
+    if(rowIndex <= 0) return [1];
+    if(rowIndex === 1) return [1, 1];
+
+    const helper = (arr: number[], ri: number) : number[] => {
+        if(ri > rowIndex) return arr;
+
+        const temp = [1];
+        for(let i=1; i<ri; i++) {
+            temp[i] = arr[i-1] + arr[i];
+        }
+        temp.push(1);
+
+        return helper(temp, ri + 1);
+    };
+
+    return helper([1, 1], 2);
+};
+
+/**
+ * https://leetcode.com/problems/pascals-triangle-ii/description/
+ */
+export const getRowIterative = (rowIndex: number) => {
+
+    if(rowIndex <= 0) return [1];
+    if(rowIndex === 1) return [1, 1];
+
+    let prev = [1];
+
+    for(let i=0; i<rowIndex; i++) {
+        const temp = [1];
+        for(let j=1; j<prev.length; j++) {
+            temp[j] = prev[j-1] + prev[j];
+        }
+        temp.push(1);
+        prev = temp;
+    }
+
+    return prev;
+};
