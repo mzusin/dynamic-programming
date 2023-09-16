@@ -48,3 +48,30 @@ export const countBits = (n: number) => {
 
     return res;
 };
+
+/**
+ * https://leetcode.com/problems/min-cost-climbing-stairs/description/
+ */
+export const minCostClimbingStairsRecursive = (cost: number[]) => {
+
+    const cache: number[] = [];
+
+    const helper = (index: number) : number => {
+
+        if(index >= cost.length) return 0;
+
+        if(cache[index] !== undefined) return cache[index];
+
+        const one = helper(index + 1);
+        const two = helper(index + 2);
+        const min = cost[index] + Math.min(one, two);
+
+        cache[index] = min;
+        return min;
+    };
+
+    const one = helper(0);
+    const two = helper(1);
+
+    return Math.min(one, two);
+};
