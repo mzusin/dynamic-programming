@@ -7,14 +7,14 @@
 -------------
 
 ## Functions
-- fibonacciNumberRecursive: (n: number) => number;
-- fibonacciNumberIterative: (n: number) => number;
-- minCostClimbingStairsIterative: (cost: number[]) => number;
-- countBits: (n: number) => number[];
-- minCostClimbingStairsRecursive: (cost: number[]) => number;
-- minCostClimbingStairsIterative: (cost: number[]) => number;
-- getRowRecursive: (rowIndex: number) => number[];
-- getRowIterative: (rowIndex: number) => number[];
+- [fibonacciNumberRecursive: (n: number) => number;](https://leetcode.com/problems/fibonacci-number/description/)
+- [fibonacciNumberIterative: (n: number) => number;](https://leetcode.com/problems/fibonacci-number/description/)
+- [export const tribonacciIterative: (n: number) => number;](https://leetcode.com/problems/n-th-tribonacci-number/description/)
+- [countBits: (n: number) => number[];](https://leetcode.com/problems/counting-bits/description/)
+- [minCostClimbingStairsIterative: (cost: number[]) => number;](https://leetcode.com/problems/min-cost-climbing-stairs/description/)
+- [minCostClimbingStairsRecursive: (cost: number[]) => number;](https://leetcode.com/problems/min-cost-climbing-stairs/description/)
+- [getRowRecursive: (rowIndex: number) => number[];](https://leetcode.com/problems/pascals-triangle-ii/description/)
+- [getRowIterative: (rowIndex: number) => number[];](https://leetcode.com/problems/pascals-triangle-ii/description/)
 
 -------------
 
