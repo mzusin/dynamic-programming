@@ -34,6 +34,19 @@ export const fibonacciNumberIterative = (n: number) => {
 };
 
 /**
+ * https://leetcode.com/problems/n-th-tribonacci-number/description/
+ */
+export const tribonacciIterative = (n: number) => {
+    const cache = [0, 1, 1];
+
+    for(let i=3; i<=n; i++) {
+        cache[i] = cache[i-1] + cache[i-2] + cache[i-3];
+    }
+
+    return cache[n];
+};
+
+/**
  * https://leetcode.com/problems/counting-bits/description/
  */
 export const countBits = (n: number) => {

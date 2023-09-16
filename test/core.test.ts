@@ -1,6 +1,7 @@
 import {
     fibonacciNumberIterative,
     fibonacciNumberRecursive,
+    tribonacciIterative,
     countBits,
     minCostClimbingStairsRecursive,
     minCostClimbingStairsIterative,
@@ -57,6 +58,32 @@ describe('Core', () => {
 
         it('should return the correct Fibonacci number for n = 15', () => {
             expect(fibonacciNumberRecursive(15)).toBe(610);
+        });
+    });
+
+    describe('tribonacciIterative()', () => {
+        it('should return 0 for n = 0', () => {
+            expect(tribonacciIterative(0)).toBe(0);
+        });
+
+        it('should return 1 for n = 1', () => {
+            expect(tribonacciIterative(1)).toBe(1);
+        });
+
+        it('should return 1 for n = 2', () => {
+            expect(tribonacciIterative(2)).toBe(1);
+        });
+
+        it('should return 2 for n = 3', () => {
+            expect(tribonacciIterative(3)).toBe(2);
+        });
+
+        it('should return 4 for n = 4', () => {
+            expect(tribonacciIterative(4)).toBe(4);
+        });
+
+        it('should return 7 for n = 5', () => {
+            expect(tribonacciIterative(5)).toBe(7);
         });
     });
 

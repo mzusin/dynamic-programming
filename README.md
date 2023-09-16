@@ -9,6 +9,7 @@
 ## Functions
 - fibonacciNumberRecursive: (n: number) => number;
 - fibonacciNumberIterative: (n: number) => number;
+- minCostClimbingStairsIterative: (cost: number[]) => number;
 - countBits: (n: number) => number[];
 - minCostClimbingStairsRecursive: (cost: number[]) => number;
 - minCostClimbingStairsIterative: (cost: number[]) => number;
