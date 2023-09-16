@@ -3,6 +3,7 @@ import {
     fibonacciNumberRecursive,
     countBits,
     minCostClimbingStairsRecursive,
+    minCostClimbingStairsIterative,
 } from '../src/core';
 
 describe('Core', () => {
@@ -93,6 +94,21 @@ describe('Core', () => {
 
         it('should return the correct minimum cost for a larger cost array', () => {
             expect(minCostClimbingStairsRecursive([1, 100, 1, 1, 1, 100, 1, 1, 100, 1])).toBe(6);
+        });
+    });
+
+    describe('minCostClimbingStairsIterative()' ,() => {
+
+        it('should return the correct minimum cost for a cost array of length 2', () => {
+            expect(minCostClimbingStairsIterative([10, 15])).toBe(10);
+        });
+
+        it('should return the correct minimum cost for a cost array of length 3', () => {
+            expect(minCostClimbingStairsIterative([10, 15, 20])).toBe(15);
+        });
+
+        it('should return the correct minimum cost for a larger cost array', () => {
+            expect(minCostClimbingStairsIterative([1, 100, 1, 1, 1, 100, 1, 1, 100, 1])).toBe(6);
         });
     });
 });

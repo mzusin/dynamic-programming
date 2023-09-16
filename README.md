@@ -11,6 +11,7 @@
 - fibonacciNumberIterative: (n: number) => number;
 - countBits: (n: number) => number[];
 - minCostClimbingStairsRecursive: (cost: number[]) => number;
+- minCostClimbingStairsIterative: (cost: number[]) => number;
 
 -------------
 

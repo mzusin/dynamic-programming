@@ -75,3 +75,17 @@ export const minCostClimbingStairsRecursive = (cost: number[]) => {
 
     return Math.min(one, two);
 };
+
+/**
+ * https://leetcode.com/problems/min-cost-climbing-stairs/description/
+ */
+export const minCostClimbingStairsIterative = (cost: number[]) => {
+
+    const cache = [0, 0];
+
+    for(let i=2; i<=cost.length; i++) {
+        cache[i] = Math.min(cost[i-1] + cache[i-1], cost[i-2] + cache[i-2]);
+    }
+
+    return cache[cost.length];
+};
