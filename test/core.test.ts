@@ -7,6 +7,7 @@ import {
     minCostClimbingStairsIterative,
     getRowRecursive,
     getRowIterative,
+    maxProfit,
 } from '../src/core';
 
 describe('Core', () => {
@@ -191,6 +192,39 @@ describe('Core', () => {
 
         it('should return the correct row for rowIndex = 5', () => {
             expect(getRowIterative(5)).toEqual([1, 5, 10, 10, 5, 1]);
+        });
+
+    });
+
+    describe('maxProfit()' ,() => {
+        it('should return 0 for an empty array', () => {
+            const prices: number[] = [];
+            const result = maxProfit(prices);
+            expect(result).toBe(0);
+        });
+
+        it('should return 0 if there is no profit to be made', () => {
+            const prices = [7, 6, 4, 3, 1];
+            const result = maxProfit(prices);
+            expect(result).toBe(0);
+        });
+
+        it('should return the correct profit for a simple case', () => {
+            const prices = [7, 1, 5, 3, 6, 4];
+            const result = maxProfit(prices);
+            expect(result).toBe(5);
+        });
+
+        it('should return the correct profit for a more complex case', () => {
+            const prices = [3, 2, 6, 5, 0, 3];
+            const result = maxProfit(prices);
+            expect(result).toBe(4);
+        });
+
+        it('should return the correct profit for a case with multiple peaks', () => {
+            const prices = [1, 2, 4, 2, 5, 7, 2, 4, 9, 0];
+            const result = maxProfit(prices);
+            expect(result).toBe(8);
         });
 
     });

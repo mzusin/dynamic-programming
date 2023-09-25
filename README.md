@@ -15,6 +15,7 @@
 - [minCostClimbingStairsRecursive: (cost: number[]) => number;](https://leetcode.com/problems/min-cost-climbing-stairs/description/)
 - [getRowRecursive: (rowIndex: number) => number[];](https://leetcode.com/problems/pascals-triangle-ii/description/)
 - [getRowIterative: (rowIndex: number) => number[];](https://leetcode.com/problems/pascals-triangle-ii/description/)
+- [maxProfit: (prices: number[]) => number;](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/)
 
 -------------
 

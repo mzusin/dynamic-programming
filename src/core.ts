@@ -147,3 +147,26 @@ export const getRowIterative = (rowIndex: number) => {
 
     return prev;
 };
+
+/**
+ * https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/
+ */
+export const maxProfit = (prices: number[]) => {
+
+    let buy = prices[0];
+    let maxProfit = 0;
+
+    for(let i=1; i<prices.length; i++) {
+        const price = prices[i];
+
+        if(price <= buy) {
+            buy = price;
+        }
+        else{
+            const currentProfit = price - buy;
+            maxProfit = Math.max(maxProfit, currentProfit);
+        }
+    }
+
+    return maxProfit;
+};
