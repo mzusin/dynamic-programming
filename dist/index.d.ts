@@ -8,4 +8,6 @@ module 'mz-dynamic-programming' {
     export const minCostClimbingStairsIterative: (cost: number[]) => number;
     export const getRowRecursive: (rowIndex: number) => number[];
     export const getRowIterative: (rowIndex: number) => number[];
+    export const maxProfit: (prices: number[]) => number;
+    export const isSubsequence: (s: string, t: string) => boolean;
 }

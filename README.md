@@ -16,6 +16,7 @@
 - [getRowRecursive: (rowIndex: number) => number[];](https://leetcode.com/problems/pascals-triangle-ii/description/)
 - [getRowIterative: (rowIndex: number) => number[];](https://leetcode.com/problems/pascals-triangle-ii/description/)
 - [maxProfit: (prices: number[]) => number;](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/)
+- [isSubsequence: (s: string, t: string) => boolean](https://leetcode.com/problems/is-subsequence/description/)
 
 -------------
 

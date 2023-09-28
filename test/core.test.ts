@@ -8,6 +8,7 @@ import {
     getRowRecursive,
     getRowIterative,
     maxProfit,
+    isSubsequence,
 } from '../src/core';
 
 describe('Core', () => {
@@ -227,6 +228,48 @@ describe('Core', () => {
             expect(result).toBe(8);
         });
 
+    });
+
+    describe('isSubsequence()' ,() => {
+        // Test case 1: s is a subsequence of t
+        it('should return true when s is a subsequence of t', () => {
+            const s = 'abc';
+            const t = 'ahbgdc';
+            const result = isSubsequence(s, t);
+            expect(result).toBe(true); // 'abc' is a subsequence of 'ahbgdc'
+        });
+
+        // Test case 2: s is not a subsequence of t
+        it('should return false when s is not a subsequence of t', () => {
+            const s = 'axc';
+            const t = 'ahbgdc';
+            const result = isSubsequence(s, t);
+            expect(result).toBe(false); // 'axc' is not a subsequence of 'ahbgdc'
+        });
+
+        // Test case 3: s is an empty string
+        it('should return true when s is an empty string (empty string is a subsequence of any string)', () => {
+            const s = '';
+            const t = 'ahbgdc';
+            const result = isSubsequence(s, t);
+            expect(result).toBe(true); // Empty string is a subsequence of any string
+        });
+
+        // Test case 4: t is an empty string, s is not
+        it('should return false when t is an empty string and s is not', () => {
+            const s = 'abc';
+            const t = '';
+            const result = isSubsequence(s, t);
+            expect(result).toBe(false); // Empty string cannot be a subsequence of any non-empty string
+        });
+
+        // Test case 5: Both s and t are empty strings
+        it('should return true when both s and t are empty strings', () => {
+            const s = '';
+            const t = '';
+            const result = isSubsequence(s, t);
+            expect(result).toBe(true); // Both strings are empty, so s is a subsequence of t
+        });
     });
 
 });

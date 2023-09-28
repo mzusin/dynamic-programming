@@ -170,3 +170,28 @@ export const maxProfit = (prices: number[]) => {
 
     return maxProfit;
 };
+
+/**
+ * https://leetcode.com/problems/is-subsequence/description/
+ */
+export const isSubsequence = (s: string, t: string) => {
+    const lenS = s.length;
+    const lenT = t.length;
+
+    if(lenS === 0 && lenT === 0) return true;
+    if(lenS > lenT) return false;
+
+    let pointerS = 0;
+    let pointerT = 0;
+
+    while(pointerT < lenT && pointerS < lenS) {
+
+        if(s[pointerS] === t[pointerT]) {
+            pointerS++;
+        }
+
+        pointerT++;
+    }
+
+    return pointerS >= lenS;
+};
